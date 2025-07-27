@@ -2,25 +2,28 @@ name: 03 java build
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main"] # El event se dispara cuando se hace un push en la rama main
 
 jobs:
+
   build:
-    runs-on: ubuntu-latest
+
+    runs-on: ubuntu-latest # Sistema operativo donde se ejecuta
+
     steps:
-      - name: Checkout repo
+      - name: Checkout repo # Descarga el repo donde esta el workflow, en el runner, para poder hacer build y test
         uses: actions/checkout@v4
 
-      - name: Set up Java 17
+      - name: Set up Java 17 # Descarga java 17 en el runner
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'  # o 'zulu', 'adopt'
           java-version: '17'
 
-      - name: Build with Maven
+      - name: Build with Maven # Construye el proyecto de java
         run: mvn clean install
         working-directory: java-project
 
-      - name: Run tests
+      - name: Run tests # Hace test del proyecto
         run: mvn test
         working-directory: java-project

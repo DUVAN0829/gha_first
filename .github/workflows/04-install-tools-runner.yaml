@@ -1,0 +1,28 @@
+name: 04 install tools runner
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+
+  install-tools:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Download Repo in runner
+        uses: actions/checkout@v4
+
+      - name: Check node version # Ubuntu latest ya incluye nodejs
+        run: node --version
+
+      - name: Install Jsonlint
+        run: |
+          sudo apt-get update
+          sudo apt-get install jsonlint
+
+      - name: Lint json
+        run: jsonlint-php package.json
