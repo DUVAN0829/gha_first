@@ -1,4 +1,4 @@
-name: Node.js Build in Subfolder
+name: 03 nodejs build
 
 on:
   push:
