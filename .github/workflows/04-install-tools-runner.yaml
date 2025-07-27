@@ -27,4 +27,4 @@ jobs:
       - name: Install CowSay
         run: |
           sudo apt-get install cowsay
-          cowsay "Hola Github actions prepara el *"
+          cowsay -f dragon "Hola Github actions :c"
