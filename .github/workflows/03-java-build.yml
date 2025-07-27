@@ -1,4 +1,4 @@
-name: 03 nodejs build
+name: 03 java build
 
 on:
   push:
@@ -19,8 +19,8 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
-        working-directory: java_project
+        working-directory: java-project
 
       - name: Run tests
         run: mvn test
-        working-directory: java_project
+        working-directory: java-project
