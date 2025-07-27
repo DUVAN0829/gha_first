@@ -16,12 +16,13 @@ jobs:
       - name: Download Repo in runner
         uses: actions/checkout@v4
 
-      - name: Check node version # Ubuntu latest ya incluye nodejs
+      - name: Check node version
         run: node --version
 
       - name: Install Jsonlint
         run: |
           sudo apt-get update
-          sudo apt-get install jsonlint
-          - name: Lint json
-            run: jsonlint-php package.json
+          sudo apt-get install -y jsonlint
+
+      - name: Lint json
+        run: jsonlint-php package.json
