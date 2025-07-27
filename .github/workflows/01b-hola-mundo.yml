@@ -1,4 +1,4 @@
-name: 01 hola mundo
+name: 01b hola mundo
 
 on:
   workflow_dispatch:
