@@ -11,7 +11,7 @@ class CuentaTest {
     @Test
     void comprobarUserName() {
 
-        Cuenta cuenta = new Cuenta("Duvan0829.", new BigDecimal(200));
+        Cuenta cuenta = new Cuenta("Duvan0829", new BigDecimal(200));
 
         assertAll(
                 () -> assertEquals("Duvan0829", cuenta.getUserName(), () -> "El usuario no corresponde")
