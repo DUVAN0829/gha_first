@@ -19,8 +19,8 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
-        working-directory: project_java
+        working-directory: java_project
 
       - name: Run tests
         run: mvn test
-        working-directory: project_java
+        working-directory: java_project
