@@ -18,5 +18,9 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
-        run: mvn clean verify
+        run: mvn clean install
+        working-directory: java-project
+
+      - name: Run tests
+        run: mvn test
         working-directory: java-project
