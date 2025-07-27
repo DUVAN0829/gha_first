@@ -1,4 +1,4 @@
-name: 03 java build
+name: 03 java builds
 
 on:
   push:
