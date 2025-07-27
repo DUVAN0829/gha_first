@@ -24,5 +24,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y jsonlint
 
-      - name: Lint json
-        run: jsonlint-php package.json
+      - name: Install CowSay
+        run: |
+          sudo apt-get install cowsay
+          cowsay -f wolf "Hola Github actions prepara el *"
