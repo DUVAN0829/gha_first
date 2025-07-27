@@ -27,4 +27,4 @@ jobs:
       - name: Install CowSay
         run: |
           sudo apt-get install cowsay
-          cowsay -f wolf "Hola Github actions prepara el *"
+          cowsay "Hola Github actions prepara el *"
