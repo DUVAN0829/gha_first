@@ -2,6 +2,8 @@ name: 02 event issuer
 
 on:
   push:
+    paths-ignore:
+    - '*.md'
   issues:
     types:
     - opened  
